@@ -1,0 +1,407 @@
+/* VARIABLES DE COLOR */
+:root{
+    --color-primario:#1e88e5;
+    --color-primario-hover:#1565c0;
+    --sidebar-bg:#0d47a1;
+    --sidebar-hover:#1976d2;
+    --texto:#333;
+    --fondo:#f5f7fb;
+    --card:#ffffff;
+    --borde:#e1e5ec;
+    --exito:#4caf50;
+    --peligro:#e53935;
+}
+
+/* BASE GENERAL */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+/* Animación suave global */
+*{
+    transition: all .15s ease-in-out;
+}
+
+/* SIDEBAR PROFESIONAL */
+.sidebar{
+    width: 240px;
+    background: linear-gradient(180deg, #0d47a1, #08306b);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.25);
+}
+
+.sidebar a{
+    color: #e3e9ff;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar a:hover{
+    background: rgba(255,255,255,0.12);
+    border-left: 3px solid #ffffff;
+    padding-left: 30px;
+}
+
+/* Íconos */
+.sidebar svg{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.logout-btn {
+    position: relative !important;
+    bottom: auto !important;
+    margin-bottom: 60px !important;
+}
+
+.logout-btn:hover {
+    background: #a71f1f;
+}
+
+/* CONTENIDO PRINCIPAL */
+.content{
+    margin-left:240px;
+    padding:25px;
+}
+
+/* CARDS */
+.card{
+    background: var(--card);
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow:0 2px 6px rgba(0,0,0,.07);
+    border:1px solid var(--borde);
+    margin-bottom:20px;
+    animation: fadeIn .4s ease;
+}
+
+/* Animación aparición */
+@keyframes fadeIn{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+/* BOTONES */
+.button{
+    background: var(--color-primario);
+    border:none;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    display:inline-block;
+    text-decoration:none;
+}
+
+.button:hover{
+    background: var(--color-primario-hover);
+}
+
+/* Botón peligro */
+.button-danger{
+    background: var(--peligro);
+}
+
+.button-danger:hover{
+    background:#b71c1c;
+}
+
+/* Botón éxito */
+.button-success{
+    background: var(--exito);
+}
+
+.button-success:hover{
+    background:#2e7d32;
+}
+
+/* INPUTS / FORMS */
+.input, input, select, textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid var(--borde);
+    margin-bottom:12px;
+    font-size:15px;
+}
+
+.input:focus, input:focus, select:focus, textarea:focus{
+    border-color:var(--color-primario);
+    outline:none;
+    box-shadow:0 0 4px rgba(30,136,229,.4);
+}
+
+/* TABLAS */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th{
+    background: var(--color-primario);
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:11px;
+    background:white;
+    border-bottom:1px solid var(--borde);
+}
+
+tr:hover td{
+    background:#eef3fb;
+}
+
+/* LOGIN / REGISTER */
+.login-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-card{
+    width:350px;
+    background:white;
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,.15);
+    animation: fadeIn .4s ease;
+}
+
+/* ANIMACIONES PEQUEÑAS */
+.hover-zoom:hover{
+    transform: scale(1.05);
+}
+
+/* DASHBOARD MEJORADO */
+
+.dashboard .titulo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dashboard .titulo span {
+    color: #1e88e5;
+}
+
+/* Tarjetas resumen */
+.tarjetas {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta h3 {
+    font-size: 34px;
+    margin: 0;
+    color: #1e88e5;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.shadow {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* Movimientos */
+.movimientos {
+    list-style: none;
+    padding: 0;
+}
+
+.movimientos li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.movimientos li:last-child {
+    border-bottom: none;
+}
+
+.etiqueta {
+    background: #1e88e5;
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* SIDEBAR MODERNO */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(180deg, #1f2937, #111827);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #2c3a4b;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sidebar a {
+    color: #d1d5db;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 4px 10px;
+    transition: background 0.2s, color 0.2s, transform .1s;
+}
+
+.sidebar a:hover {
+    background: #374151;
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.sidebar .icon {
+    font-size: 18px;
+}
+
+.sidebar-spacer {
+    flex: 1;
+}
+
+.logout-btn {
+    background: #b91c1c !important;
+    color: white !important;
+}
+
+.logout-btn:hover {
+    background: #dc2626 !important;
+}
+
+/* TARJETAS DEL DASHBOARD */
+
+.tarjeta {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.tarjeta h3 {
+    font-size: 36px;
+    margin: 0;
+    color: #253feb;
+    font-weight: bold;
+}
+
+.tarjeta p {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: #4b5563;
+}
+
+canvas {
+    border-radius: 10px;
+    background: #f8fafc;
+    padding: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: 0.2s;
+}
+
+.btn-edit {
+    background: #1e90ff;
+}
+
+.btn-edit:hover {
+    background: #006edc;
+}
+
+.btn-delete {
+    background: #e74c3c;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* ALERTAS (errores) */
+.alert {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.alert.error {
+  background: #ffe9e9;
+  color: #8b1e1e;
+  border-left: 4px solid #e53935;
+}
